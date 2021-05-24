@@ -8,14 +8,14 @@ import {store} from '@cirrusit/flux';
 })
 export class AppComponent {
   title = 'showProject';
-  name = '';
-  constructor(){
-    this.name = '';
-    store.addListener(this.notifyChanged.bind(this));
+  name = 'Adam';
+  constructor() {
+    this.name = window.localStorage.getItem('name');
+    // store.addListener(this.notifyChanged.bind(this));
 
   }
-  notifyChanged() {
+  /*notifyChanged() {
     this.name = store.getSelectedItem();
     console.log('El nombre recibido desde otro componente es:', this.name);
-  }
+  }*/
 }
